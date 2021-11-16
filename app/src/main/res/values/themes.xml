@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Theme.Skippy" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@android:color/black</item>
-        <item name="colorAccent">@android:color/black</item>
+        <item name="colorAccent">@android:color/white</item>
         <item name="android:background">?colorPrimary</item>
         <item name="android:navigationBarColor" tools:targetApi="lollipop">?colorPrimary</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">?colorPrimary</item>
