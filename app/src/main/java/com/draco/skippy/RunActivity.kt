@@ -29,6 +29,11 @@ class RunActivity : AppCompatActivity() {
             output.setTextIsSelectable(true)
         }
 
+        viewModel.finished.observe(this) {
+            if (it == true)
+                finish()
+        }
+
         /* Execute the script only once */
         if (viewModel.handled)
             return

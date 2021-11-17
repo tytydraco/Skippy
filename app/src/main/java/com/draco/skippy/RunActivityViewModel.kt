@@ -26,6 +26,9 @@ class RunActivityViewModel(application: Application) : AndroidViewModel(applicat
 
     var handled = false
 
+    private val _finished = MutableLiveData(false)
+    val finished: LiveData<Boolean> = _finished
+
     private var powerManager = application.applicationContext.getSystemService(Context.POWER_SERVICE) as PowerManager
     private val wakelock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, WAKELOCK_TAG)
 
@@ -74,6 +77,8 @@ class RunActivityViewModel(application: Application) : AndroidViewModel(applicat
             }
 
             wakelock.release()
+
+            _finished.postValue(true)
         }
     }
 }
