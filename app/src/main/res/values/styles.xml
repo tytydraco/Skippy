@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Widget.Skippy.TextView" parent="Widget.AppCompat.TextView">
+    <style name="ScrollView">
+        <item name="android:scrollbars">none</item>
+    </style>
+    <style name="Text" parent="Widget.AppCompat.TextView">
         <item name="android:padding">8dp</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textIsSelectable">true</item>
